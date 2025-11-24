@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template_string
+# fix render cache
 from openai import OpenAI
 import os
 app = Flask(__name__)
@@ -70,5 +71,6 @@ def chat():
 
 if _name_ == "_main_":
     app.run(host="0.0.0.0", port=10000)
+
 
 
