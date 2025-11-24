@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify, render_template_string
 from openai import OpenAI
 import os
-
 app = Flask(__name__)
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
@@ -71,4 +70,5 @@ def chat():
 
 if _name_ == "_main_":
     app.run(host="0.0.0.0", port=10000)
+
 
